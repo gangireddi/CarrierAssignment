@@ -11,6 +11,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let apiCall = NetworkManager()
+        apiCall.callLoginAPi(userName: "masarvghadi1+7@gmail.com", password: "1234Aa|!") {
+            
+        }
         // Do any additional setup after loading the view.
     }
 
