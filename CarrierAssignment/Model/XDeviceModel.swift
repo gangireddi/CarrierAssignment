@@ -6,30 +6,27 @@
 //
 
 import Foundation
-struct XDeviceOutPutModel {
+struct XDeviceModel {
     let id: Int?
-    let serial_number: Int?
-    let model: Int?
-    let id: Int?
-    let id: Int?
-    let id: Int?
-    let id: Int?
-    let id: Int?
+    let serial_number: String?
+    let model: String?
+    let location: String?
+    let date: String?
+    let time: String?
+    let weather: String?
+    let thVal: ThValModel?
+    
+    enum CodingKey: String,Decodable {
+        case id,serial_number,model,location,date,time,weather,thVal
+    }
 }
 
-
-{
-        "id": xx345,
-        "serial_number": "01345fg4",
-        "model": "wifidetector"
-        "location": Detroit,
-        "date": 02092022,
-        "time": 8:20AM,
-        "weather": cloudy,
-        "thval": {
-            "temp": "25",
-            "hum": "40",
-            "alarm": "on"
-        },
-        
+struct ThValModel {
+    let temp: String?
+    let hum: String?
+    let alarm: String?
+    
+    enum CodingKey: String,Decodable {
+        case temp,hum,alarm
     }
+}

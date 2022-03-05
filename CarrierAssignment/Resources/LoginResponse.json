@@ -1,0 +1,11 @@
+{
+    "success": true,
+    "authorization_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiOTFkZmUyZmUyYWU4ZjA2MzQ0NWQ2NzUyZmJkZThkMjYxYzYzMWY4NTVhZjg1MzU3NGRhM2U5NGIzM2VjOGFiOWEzMzVhMmMwOTg1ZjBjOGQiLCJpYXQiOjE2NDY0NzgyNDQsIm5iZiI6MTY0NjQ3ODI0NCwiZXhwIjoxNjc4MDE0MjQ0LCJzdWIiOiIzOTAiLCJzY29wZXMiOltdfQ.hijeaGcvvJv1flnOcCOQGBNMqu3yAkpHNB_igPIc6mYP9X8JWLro8d_G0uZd5DYqhUjDrnu4oyW3spHoBKd-JyBLpx6qGoqZnUEBXwtygV0OaJAzBoI_MqFyFo2v4JNeovYcluiNM3KcKiEiwCcNppRVF-anQIX5nVbFvI8uiJxspTdVmuk-BsF3JtKh_6Wc6Hds8pLNcg0OTX2rbPMdju74pv-jLianK_DYiFuB5Xy-nQV77msLRsrc2o1CHWeJPcVKSsKwzkrTo6kfgnSucAme6aJlCpHgRezwpmnbIZI9bCs_u6K89wn7WQZRfLrIkqdEBdm6iTIOJsXLs-NDS1KOij9ECVtJWrz0Nblz0Uo7jCZOmV-YQVTK9n2AmZJ-9blyWEmoCwptS7NMXkRpMLFCbMXt-7G3I91aBehdpDkTv7AEUCsxtYMDZLCRoB7l-AerZ4YYz8aFOF9YZggsMuFWQ3G_6BFzDYeoKfoOEVZLeFartsTjn5hXpUrt_z5XiMKxKYRhRI0DcRXtf3QTSEGYNF4VmPqbNdROTEjwTtMGVJgAbznTnPnGyY7Xlt4VpGRH2D-fCfw249cmhC24DnXLBhWJpD9muMpLKyDtyJYG2zTkyKBA05qUt78C6AqWl7HW71gzL1GnasGcOsvVTMnic6f280L8etxa7RhJFPo"
+    "user": {
+        "id": 390,
+        "name": "Sandeep",
+        "first_name": "Sandeep",
+        "last_name": "Gangireddi",
+        "email": "test@gmail.com"
+    }
+}

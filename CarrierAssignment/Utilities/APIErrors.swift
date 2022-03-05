@@ -1,10 +1,3 @@
-//
-//  APIErrors.swift
-//  Gangireddi
-//
-//  Created by Apple on 30/01/22.
-//
-
 import Foundation
 
 enum APIError: Error {
