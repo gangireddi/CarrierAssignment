@@ -23,6 +23,7 @@ class LoginVC: UIViewController {
                 switch result {
                 case .success(let authModel):
                     self?.authModel = authModel
+                    CarrierAssignment_SharedInstance.autorizatioToken = authModel.authorization_token
                 case .failure(let error):
                     switch error {
                     case .invalidURL:

@@ -9,19 +9,22 @@ import UIKit
 
 class DeviceDetailsVC: UIViewController {
     
-    var authModel: AuthModel?
-
+    var deviceDataList = [XDeviceModel]()
+    @IBOutlet weak var tblView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        getDeviceDetails()
     }
-    func loginAction() {
+    func getDeviceDetails() {
         let apiCall = NetworkManager()
         
-        apiCall.callLoginAPI(userName: "masarvghadi1+7@gmail.com", password: "1234Aa|!", complitionHandler: { [weak self] result in
+        apiCall.callDeviceDetailsAPI(complitionHandler: { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
-                case .success(let authModel):
-                    self?.authModel = authModel
+                case .success(let _deviceDataList):
+                    self?.deviceDataList = _deviceDataList
+                    self?.tblView.reloadData()
                 case .failure(let error):
                     switch error {
                     case .invalidURL:
@@ -39,3 +42,23 @@ class DeviceDetailsVC: UIViewController {
     }
 }
 
+extension DeviceDetailsVC: UITableViewDelegate,UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DeviceDetailsCell") as! DeviceDetailsCell
+        
+        let xDeviceModel = deviceDataList[indexPath.row]
+        cell.idLbl.text = "ID: " + (xDeviceModel.id ?? "")
+        cell.modelLbl.text = "Model: " + (xDeviceModel.model ?? "")
+        if let thVal = xDeviceModel.thval {
+            let alarm = "Alarm: " + (thVal.alarm ?? "")
+            let humidity = ", Humidity: " + (thVal.hum ?? "")
+            let temperature = ", Temperature: " + (thVal.temp ?? "")
+            cell.thValLbl.text = alarm + humidity + temperature
+        }        
+        return cell
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return deviceDataList.count
+    }
+}
