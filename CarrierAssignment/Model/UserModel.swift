@@ -8,7 +8,7 @@
 import Foundation
 
 struct AuthModel: Decodable {
-    let success: String?
+    let success: Bool?
     let authorization_token: String?
     let user: User?
     

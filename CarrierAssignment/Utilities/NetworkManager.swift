@@ -20,6 +20,18 @@ class NetworkManager {
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
+            if let filePath = Bundle.main.url(forResource: "LoginResponse", withExtension: "json")?.path {
+                do {
+                    let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
+                    let decoder = JSONDecoder()
+                    let decodedResponse: AuthModel = try decoder.decode(AuthModel.self, from: data)
+                    complitionHandler(.success(decodedResponse))
+                }
+                catch {
+                    print(error.localizedDescription)
+                }
+            }
+            
             if let _ = error {
                 complitionHandler(.failure(.unableToComplete))
                 return

@@ -11,12 +11,41 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var autorizatioToken: String?
+    var isServerReachable: Bool = false
+    let reachability = try! Reachability()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged), name: .reachabilityChanged, object: reachability)
+        do{
+            try reachability.startNotifier()
+        }catch{
+            print("could not start reachability notifier")
+        }
+        
         // Override point for customization after application launch.
         return true
     }
 
+    @objc func reachabilityChanged(note: Notification) {
+        
+        let reachability = note.object as! Reachability
+        
+        NotificationCenter.default.post(name: .checkForOfflineMode, object: reachability)
+        
+        switch reachability.connection {
+        case .wifi:
+            isServerReachable = true
+            print("Reachable via WiFi")
+        case .cellular:
+            isServerReachable = true
+            print("Reachable via Cellular")
+        case .unavailable:
+            isServerReachable = false
+            print("Network not reachable")
+        }
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -34,3 +63,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension Notification.Name {
+    static var checkForOfflineMode: Notification.Name {
+        return .init(rawValue: "Reachability.checkForOfflineMode")
+    }
+}

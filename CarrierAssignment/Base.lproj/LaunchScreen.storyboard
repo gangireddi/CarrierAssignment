@@ -24,7 +24,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
                             <constraint firstItem="Mft-fa-XSj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1UI-ho-Qjj"/>
                             <constraint firstItem="Mft-fa-XSj" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="K0h-bu-gjH"/>
@@ -37,8 +37,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

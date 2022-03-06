@@ -28,5 +28,75 @@
             "hum": "45",
             "alarm": "on"
         },        
+    },
+    {
+        "id":"xx346",
+        "serial_number": "01345fg5",
+        "model": "wifidetector",
+        "location":"Detroit",
+        "date": "02092022",
+        "time": "8:25AM",
+        "weather":"cloudy",
+        "thval": {
+            "temp": "28",
+            "hum": "45",
+            "alarm": "on"
+        },
+    },
+    {
+        "id":"xx346",
+        "serial_number": "01345fg5",
+        "model": "wifidetector",
+        "location":"Detroit",
+        "date": "02092022",
+        "time": "8:25AM",
+        "weather":"cloudy",
+        "thval": {
+            "temp": "28",
+            "hum": "45",
+            "alarm": "on"
+        },
+    },
+    {
+        "id":"xx346",
+        "serial_number": "01345fg5",
+        "model": "wifidetector",
+        "location":"Detroit",
+        "date": "02092022",
+        "time": "8:25AM",
+        "weather":"cloudy",
+        "thval": {
+            "temp": "28",
+            "hum": "45",
+            "alarm": "on"
+        },
+    },
+    {
+        "id":"xx346",
+        "serial_number": "01345fg5",
+        "model": "wifidetector",
+        "location":"Detroit",
+        "date": "02092022",
+        "time": "8:25AM",
+        "weather":"cloudy",
+        "thval": {
+            "temp": "28",
+            "hum": "45",
+            "alarm": "on"
+        },
+    },
+    {
+        "id":"xx346",
+        "serial_number": "01345fg5",
+        "model": "wifidetector",
+        "location":"Detroit",
+        "date": "02092022",
+        "time": "8:25AM",
+        "weather":"cloudy",
+        "thval": {
+            "temp": "28",
+            "hum": "45",
+            "alarm": "on"
+        },
     }
 ]

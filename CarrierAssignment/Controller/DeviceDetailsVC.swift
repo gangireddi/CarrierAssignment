@@ -7,20 +7,24 @@
 
 import UIKit
 
-class DeviceDetailsVC: UIViewController {
+class DeviceDetailsVC: BaseViewController {
     
     var deviceDataList = [XDeviceModel]()
     @IBOutlet weak var tblView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getDeviceDetails()
+        if CarrierAssignment_SharedInstance.isServerReachable == true {
+            showLoader()
+            getDeviceDetails()
+        } else {
+            showAlertMessage(title: "Alert", message: "Please check your internet connection")
+        }
     }
-    func getDeviceDetails() {
-        let apiCall = NetworkManager()
-        
-        apiCall.callDeviceDetailsAPI(complitionHandler: { [weak self] result in
+    func getDeviceDetails() {        
+        NetworkManager().callDeviceDetailsAPI(complitionHandler: { [weak self] result in
             DispatchQueue.main.async {
+                self?.removeLoader()
                 switch result {
                 case .success(let _deviceDataList):
                     self?.deviceDataList = _deviceDataList
@@ -40,6 +44,9 @@ class DeviceDetailsVC: UIViewController {
             }
         })
     }
+    @IBAction func backButtonAction(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension DeviceDetailsVC: UITableViewDelegate,UITableViewDataSource {
@@ -50,12 +57,14 @@ extension DeviceDetailsVC: UITableViewDelegate,UITableViewDataSource {
         let xDeviceModel = deviceDataList[indexPath.row]
         cell.idLbl.text = "ID: " + (xDeviceModel.id ?? "")
         cell.modelLbl.text = "Model: " + (xDeviceModel.model ?? "")
+        cell.cellBgVw.backgroundColor = indexPath.row%2 == 0 ? UIColor.systemBlue.withAlphaComponent(1.0) : UIColor.systemBlue.withAlphaComponent(0.7)
         if let thVal = xDeviceModel.thval {
             let alarm = "Alarm: " + (thVal.alarm ?? "")
             let humidity = ", Humidity: " + (thVal.hum ?? "")
             let temperature = ", Temperature: " + (thVal.temp ?? "")
             cell.thValLbl.text = alarm + humidity + temperature
-        }        
+        }
+        cell.selectionStyle = .none
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
