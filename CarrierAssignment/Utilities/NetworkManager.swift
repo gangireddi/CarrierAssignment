@@ -30,6 +30,7 @@ class NetworkManager {
                 catch {
                     print(error.localizedDescription)
                 }
+                return
             }
             
             if let _ = error {
@@ -86,6 +87,7 @@ class NetworkManager {
                 catch {
                     print(error.localizedDescription)
                 }
+                return
             }
             
             if let _ = error {

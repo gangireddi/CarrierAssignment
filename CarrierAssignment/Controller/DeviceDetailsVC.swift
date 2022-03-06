@@ -32,13 +32,13 @@ class DeviceDetailsVC: BaseViewController {
                 case .failure(let error):
                     switch error {
                     case .invalidURL:
-                        print("invalidURL")
+                        self?.showAlertMessage(title: "Alert", message: "invalidURL")
                     case .unableToComplete:
-                        print("unableToComplete")
+                        self?.showAlertMessage(title: "Alert", message: "unableToComplete")
                     case .invalidResponse:
-                        print("invalidResponse")
+                        self?.showAlertMessage(title: "Alert", message: "invalidResponse")
                     case .invalidData:
-                        print("invalidData")
+                        self?.showAlertMessage(title: "Alert", message: "invalidData")
                     }
                 }
             }

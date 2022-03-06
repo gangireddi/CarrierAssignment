@@ -12,7 +12,7 @@ class LoginVC: BaseViewController {
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
     var authModel: AuthModel?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -53,27 +53,30 @@ class LoginVC: BaseViewController {
             }
         }
     }
+    
     func loginAction() {        
         NetworkManager().callLoginAPI(userName: emailTxtField.text ?? "", password: passwordTxtField.text ?? "", complitionHandler: { [weak self] result in
             DispatchQueue.main.async {
                 self?.removeLoader()
                 switch result {
                 case .success(let authModel):
+                    self?.emailTxtField.text = ""
+                    self?.passwordTxtField.text = ""
                     self?.authModel = authModel
                     CarrierAssignment_SharedInstance.autorizatioToken = authModel.authorization_token
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc: DeviceDetailsVC = storyboard.instantiateViewController(withIdentifier: "DeviceDetailsVC") as! DeviceDetailsVC
+                    let vc: HomeVC = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
                     self?.navigationController?.pushViewController(vc, animated: true)
                 case .failure(let error):
                     switch error {
                     case .invalidURL:
-                        print("invalidURL")
+                        self?.showAlertMessage(title: "Alert", message: "invalidURL")
                     case .unableToComplete:
-                        print("unableToComplete")
+                        self?.showAlertMessage(title: "Alert", message: "unableToComplete")
                     case .invalidResponse:
-                        print("invalidResponse")
+                        self?.showAlertMessage(title: "Alert", message: "invalidResponse")
                     case .invalidData:
-                        print("invalidData")
+                        self?.showAlertMessage(title: "Alert", message: "invalidData")
                     }
                 }
             }

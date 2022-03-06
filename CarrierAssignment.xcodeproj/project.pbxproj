@@ -26,6 +26,7 @@
 		68334CBA27D4512400B79751 /* DeviceDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68334CB927D4512400B79751 /* DeviceDetailsCell.swift */; };
 		68334CE127D4744100B79751 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68334CE027D4744100B79751 /* Reachability.swift */; };
 		68334CE627D47D8200B79751 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68334CE527D47D8200B79751 /* BaseViewController.swift */; };
+		68334CEB27D482E600B79751 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68334CEA27D482E600B79751 /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		68334CB927D4512400B79751 /* DeviceDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailsCell.swift; sourceTree = "<group>"; };
 		68334CE027D4744100B79751 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		68334CE527D47D8200B79751 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		68334CEA27D482E600B79751 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				1822CDEE27D36AE400681388 /* LoginVC.swift */,
 				1822CE4627D38AFC00681388 /* DeviceDetailsVC.swift */,
 				68334CE527D47D8200B79751 /* BaseViewController.swift */,
+				68334CEA27D482E600B79751 /* HomeVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				1822CE4727D38AFC00681388 /* DeviceDetailsVC.swift in Sources */,
 				1822CE2927D36D3D00681388 /* APIErrors.swift in Sources */,
 				1822CE3F27D37FB300681388 /* UserModel.swift in Sources */,
+				68334CEB27D482E600B79751 /* HomeVC.swift in Sources */,
 				1822CDEF27D36AE400681388 /* LoginVC.swift in Sources */,
 				68334CE627D47D8200B79751 /* BaseViewController.swift in Sources */,
 				1822CE2227D36BC200681388 /* XDeviceModel.swift in Sources */,

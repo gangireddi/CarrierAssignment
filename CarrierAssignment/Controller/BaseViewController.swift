@@ -8,10 +8,10 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -37,11 +37,11 @@ class BaseViewController: UIViewController {
         vw.addSubview(activityIndictor)
         activityIndictor.startAnimating()
     }
-
+    
     func removeLoader() {
         self.view.viewWithTag(123456)?.removeFromSuperview()
     }
-
+    
     func showAlertMessage(title: String,message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
