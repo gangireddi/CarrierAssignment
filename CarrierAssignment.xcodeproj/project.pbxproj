@@ -17,7 +17,7 @@
 		1822CE0D27D36AE500681388 /* CarrierAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822CE0C27D36AE500681388 /* CarrierAssignmentUITests.swift */; };
 		1822CE2227D36BC200681388 /* XDeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822CE2127D36BC200681388 /* XDeviceModel.swift */; };
 		1822CE2927D36D3D00681388 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822CE2727D36D3D00681388 /* APIErrors.swift */; };
-		1822CE2A27D36D3D00681388 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822CE2827D36D3D00681388 /* NetworkManager.swift */; };
+		1822CE2A27D36D3D00681388 /* ApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822CE2827D36D3D00681388 /* ApiHandler.swift */; };
 		1822CE3027D37CC200681388 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822CE2F27D37CC200681388 /* AppConstants.swift */; };
 		1822CE3527D37DC500681388 /* LoginResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 1822CE3427D37DC500681388 /* LoginResponse.json */; };
 		1822CE3A27D37E1B00681388 /* XDeviceData.json in Resources */ = {isa = PBXBuildFile; fileRef = 1822CE3927D37E1B00681388 /* XDeviceData.json */; };
@@ -63,7 +63,7 @@
 		1822CE0E27D36AE500681388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1822CE2127D36BC200681388 /* XDeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDeviceModel.swift; sourceTree = "<group>"; };
 		1822CE2727D36D3D00681388 /* APIErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
-		1822CE2827D36D3D00681388 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		1822CE2827D36D3D00681388 /* ApiHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHandler.swift; sourceTree = "<group>"; };
 		1822CE2F27D37CC200681388 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		1822CE3427D37DC500681388 /* LoginResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LoginResponse.json; sourceTree = "<group>"; };
 		1822CE3927D37E1B00681388 /* XDeviceData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = XDeviceData.json; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 			children = (
 				68334CE027D4744100B79751 /* Reachability.swift */,
 				1822CE2727D36D3D00681388 /* APIErrors.swift */,
-				1822CE2827D36D3D00681388 /* NetworkManager.swift */,
+				1822CE2827D36D3D00681388 /* ApiHandler.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -344,7 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1822CE2A27D36D3D00681388 /* NetworkManager.swift in Sources */,
+				1822CE2A27D36D3D00681388 /* ApiHandler.swift in Sources */,
 				1822CE4727D38AFC00681388 /* DeviceDetailsVC.swift in Sources */,
 				1822CE2927D36D3D00681388 /* APIErrors.swift in Sources */,
 				1822CE3F27D37FB300681388 /* UserModel.swift in Sources */,
@@ -533,12 +533,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48226CCTFT;
 				INFOPLIST_FILE = CarrierAssignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gangireddi.CarrierAssignment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pccsuk.innovation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -551,12 +553,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48226CCTFT;
 				INFOPLIST_FILE = CarrierAssignment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gangireddi.CarrierAssignment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pccsuk.innovation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

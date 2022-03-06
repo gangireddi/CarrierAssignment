@@ -42,6 +42,8 @@ class LoginVC: BaseViewController {
     @IBAction func loginButtonAction(_ sender: UIButton) {
         if emailTxtField.text == "" {
             showAlertMessage(title: "Alert", message: "Please enter email id")
+        } else if !isValidEmail(emailTxtField.text ?? "") {
+            showAlertMessage(title: "Alert", message: "Please enter valid email id")
         } else if passwordTxtField.text == "" {
             showAlertMessage(title: "Alert", message: "Please enter password")
         } else {
@@ -54,8 +56,18 @@ class LoginVC: BaseViewController {
         }
     }
     
+    //MARK: -->Email validator
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
+    }
+    
+    //MARK: -->LoginAction
+    //----To hit login API
     func loginAction() {        
-        NetworkManager().callLoginAPI(userName: emailTxtField.text ?? "", password: passwordTxtField.text ?? "", complitionHandler: { [weak self] result in
+        ApiHandler().callLoginAPI(userName: emailTxtField.text ?? "", password: passwordTxtField.text ?? "", complitionHandler: { [weak self] result in
             DispatchQueue.main.async {
                 self?.removeLoader()
                 switch result {
@@ -84,6 +96,8 @@ class LoginVC: BaseViewController {
     }
 }
 
+//MARK: -->UITextFieldDelegate
+//----Implentation of TextField delegate methods
 extension LoginVC: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {

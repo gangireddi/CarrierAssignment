@@ -1,7 +1,9 @@
 import UIKit
 
-class NetworkManager {
+class ApiHandler {
     
+    //MARK: -->Login Api call
+    //----It returns AuthModel
     func callLoginAPI(userName: String, password: String, complitionHandler: @escaping (Result<AuthModel,APIError>)->Void) {
         
         let urlString = BASE_URL + LOGIN_API
@@ -60,6 +62,8 @@ class NetworkManager {
         task.resume()
     }
     
+    //MARK: -->Login Api call
+    //----It returns AuthModel
     func callDeviceDetailsAPI(complitionHandler: @escaping (Result<[XDeviceModel],APIError>)->Void) {
         
         let urlString = BASE_URL + X_DEVICE_API

@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    //MARK: -->Reachability check
+    //----To check the internet connectivity in the app
     @objc func reachabilityChanged(note: Notification) {
         
         let reachability = note.object as! Reachability

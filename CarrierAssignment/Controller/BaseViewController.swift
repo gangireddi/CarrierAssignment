@@ -20,7 +20,7 @@ class BaseViewController: UIViewController {
         activityIndictor.color = UIColor.white
         
         let vw: UIView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width/2.0, height: 120))
-        vw.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        vw.backgroundColor = UIColor.blue.withAlphaComponent(0.8)
         vw.layer.masksToBounds = true
         vw.layer.cornerRadius = 10.0
         vw.tag = 123456
@@ -29,6 +29,7 @@ class BaseViewController: UIViewController {
         let lbl = UILabel(frame: CGRect(x: 0, y: vw.frame.size.height/2.0+5, width: vw.frame.size.width, height: 30))
         lbl.numberOfLines = 0
         lbl.text = "Loading\nPlease wait....."
+        lbl.textColor = .white
         lbl.font = UIFont(name: "Helvetica Neue", size: 12)!
         lbl.textAlignment = .center
         vw.addSubview(lbl)

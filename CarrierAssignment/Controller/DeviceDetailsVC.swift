@@ -21,8 +21,11 @@ class DeviceDetailsVC: BaseViewController {
             showAlertMessage(title: "Alert", message: "Please check your internet connection")
         }
     }
+    
+    //MARK: -->LoginAction
+    //----To hit login API
     func getDeviceDetails() {        
-        NetworkManager().callDeviceDetailsAPI(complitionHandler: { [weak self] result in
+        ApiHandler().callDeviceDetailsAPI(complitionHandler: { [weak self] result in
             DispatchQueue.main.async {
                 self?.removeLoader()
                 switch result {
@@ -48,6 +51,9 @@ class DeviceDetailsVC: BaseViewController {
         self.navigationController?.popViewController(animated: true)
     }
 }
+
+//MARK: -->UITableViewDelegate,UITableViewDataSource
+//----Implentation of TableView delegate and datasource methods
 
 extension DeviceDetailsVC: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
