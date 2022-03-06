@@ -8,8 +8,8 @@
 import Foundation
 import UIKit
 
-let BASE_URL = "https://develop.vhglobal.org/"//"https://api.carrier.com/api/v4/"
-let LOGIN_API = "login"//"auth/login"
+let BASE_URL = "https://api.carrier.com/api/v4/"
+let LOGIN_API = "auth/login"
 let X_DEVICE_API = "location/12456/device"
 
 let CONTENT_TYPE_VALUE = "application/json; charset=utf-8"

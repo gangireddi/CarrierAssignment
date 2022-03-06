@@ -22,7 +22,8 @@ class ApiHandler {
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            if let filePath = Bundle.main.url(forResource: "LoginResponse", withExtension: "json")?.path {
+            //To get data from bundle file "LoginResponse.json", uncomment below code and check
+            /*if let filePath = Bundle.main.url(forResource: "LoginResponse", withExtension: "json")?.path {
                 do {
                     let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
                     let decoder = JSONDecoder()
@@ -33,7 +34,7 @@ class ApiHandler {
                     print(error.localizedDescription)
                 }
                 return
-            }
+            }*/
             
             if let _ = error {
                 complitionHandler(.failure(.unableToComplete))
@@ -81,7 +82,8 @@ class ApiHandler {
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
-            if let filePath = Bundle.main.url(forResource: "XDeviceData", withExtension: "json")?.path {
+            //To get data from bundle file "XDeviceData.json", uncomment below code and check
+            /*if let filePath = Bundle.main.url(forResource: "XDeviceData", withExtension: "json")?.path {
                 do {
                     let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
                     let decoder = JSONDecoder()
@@ -92,7 +94,7 @@ class ApiHandler {
                     print(error.localizedDescription)
                 }
                 return
-            }
+            }*/
             
             if let _ = error {
                 complitionHandler(.failure(.unableToComplete))
