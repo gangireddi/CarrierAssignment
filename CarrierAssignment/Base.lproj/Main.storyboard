@@ -110,10 +110,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please enter email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dv9-nV-TTD">
-                                                        <rect key="frame" x="20" y="101" width="334" height="40"/>
+                                                        <rect key="frame" x="20" y="101" width="334" height="50"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="4N5-yv-M1b"/>
+                                                            <constraint firstAttribute="height" constant="50" id="4N5-yv-M1b"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.4793204069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
@@ -132,16 +132,16 @@
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91K-em-fsJ">
-                                                        <rect key="frame" x="20" y="151" width="334" height="24"/>
+                                                        <rect key="frame" x="20" y="161" width="334" height="24"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.4793204069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TMk-T6-sEH">
-                                                        <rect key="frame" x="20" y="180" width="334" height="40"/>
+                                                        <rect key="frame" x="20" y="190" width="334" height="50"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="UUo-Is-ujy"/>
+                                                            <constraint firstAttribute="height" constant="50" id="UUo-Is-ujy"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.4793204069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
@@ -151,7 +151,7 @@
                                                         </connections>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXp-Jt-gdv">
-                                                        <rect key="frame" x="20" y="250" width="334" height="50"/>
+                                                        <rect key="frame" x="20" y="260" width="334" height="50"/>
                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.4793204069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="G2b-ue-wLX"/>
@@ -178,7 +178,7 @@
                                                     <constraint firstAttribute="height" constant="320" id="JiA-ZE-n6N"/>
                                                     <constraint firstItem="pXp-Jt-gdv" firstAttribute="leading" secondItem="S9c-Fa-fcf" secondAttribute="leading" id="OpX-vn-lH2"/>
                                                     <constraint firstItem="Dv9-nV-TTD" firstAttribute="trailing" secondItem="S9c-Fa-fcf" secondAttribute="trailing" id="SHt-gJ-Aty"/>
-                                                    <constraint firstItem="pXp-Jt-gdv" firstAttribute="top" secondItem="TMk-T6-sEH" secondAttribute="bottom" constant="30" id="ayM-hh-lds"/>
+                                                    <constraint firstItem="pXp-Jt-gdv" firstAttribute="top" secondItem="TMk-T6-sEH" secondAttribute="bottom" constant="20" id="ayM-hh-lds"/>
                                                     <constraint firstItem="91K-em-fsJ" firstAttribute="top" secondItem="Dv9-nV-TTD" secondAttribute="bottom" constant="10" id="cRG-ei-j5z"/>
                                                     <constraint firstItem="pXp-Jt-gdv" firstAttribute="trailing" secondItem="S9c-Fa-fcf" secondAttribute="trailing" id="dd3-WJ-f6x"/>
                                                     <constraint firstItem="Dv9-nV-TTD" firstAttribute="leading" secondItem="S9c-Fa-fcf" secondAttribute="leading" id="g4L-ag-dpu"/>
