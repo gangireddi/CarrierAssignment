@@ -63,8 +63,8 @@ class ApiHandler {
         task.resume()
     }
     
-    //MARK: -->Login Api call
-    //----It returns AuthModel
+    //MARK: -->Device Details Api call
+    //----It returns XDeviceModel
     func callDeviceDetailsAPI(complitionHandler: @escaping (Result<[XDeviceModel],APIError>)->Void) {
         
         let urlString = BASE_URL + X_DEVICE_API
