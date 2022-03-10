@@ -4,7 +4,7 @@ class ApiHandler {
     
     //MARK: -->Login Api call
     //----It returns AuthModel
-    func callLoginAPI(userName: String, password: String, complitionHandler: @escaping (Result<AuthModel,APIError>)->Void) {
+    func callLoginAPI(login: LoginRequest, complitionHandler: @escaping (Result<AuthModel,APIError>)->Void) {
         
         let urlString = BASE_URL + LOGIN_API
         
@@ -16,14 +16,14 @@ class ApiHandler {
         var request = URLRequest(url: url)
         request.setValue(CONTENT_TYPE_VALUE, forHTTPHeaderField: CONTENT_TYPE)
         request.httpMethod = HTTP_METHOD_POST
-        let requestBody = String(format: "{\"email\": \"%@\",\"password\": \"%@\"}",userName, password)
+        let requestBody = String(format: "{\"email\": \"%@\",\"password\": \"%@\"}",login.userEmail, login.userPassword)
     
         request.httpBody = requestBody.data(using: .utf8)
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             //To get data from bundle file "LoginResponse.json", uncomment below code and check
-            /*if let filePath = Bundle.main.url(forResource: "LoginResponse", withExtension: "json")?.path {
+            if let filePath = Bundle.main.url(forResource: "LoginResponse", withExtension: "json")?.path {
                 do {
                     let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
                     let decoder = JSONDecoder()
@@ -34,7 +34,7 @@ class ApiHandler {
                     print(error.localizedDescription)
                 }
                 return
-            }*/
+            }
             
             if let _ = error {
                 complitionHandler(.failure(.unableToComplete))

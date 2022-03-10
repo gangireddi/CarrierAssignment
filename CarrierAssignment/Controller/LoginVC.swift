@@ -66,8 +66,9 @@ class LoginVC: BaseViewController {
     
     //MARK: -->LoginAction
     //----To hit login API
-    func loginAction() {        
-        ApiHandler().callLoginAPI(userName: emailTxtField.text ?? "", password: passwordTxtField.text ?? "", complitionHandler: { [weak self] result in
+    func loginAction() {
+        let request = LoginRequest(userEmail: emailTxtField.text ?? "", userPassword: passwordTxtField.text ?? "")
+        ApiHandler().callLoginAPI(login: request, complitionHandler: { [weak self] result in
             DispatchQueue.main.async {
                 self?.removeLoader()
                 switch result {
